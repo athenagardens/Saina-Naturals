@@ -42,7 +42,7 @@ p, li, label, .stMarkdown, .stRadio label, .stSelectbox label {{
     padding: 1.3rem;
     box-shadow: 0 4px 20px rgba(0,0,0,0.04);
     border: 1px solid {SAND};
-    height: 100%;
+    margin-bottom: 1rem;
 }}
 
 .price {{
@@ -87,10 +87,9 @@ div[data-testid="stSidebar"] {{
 </style>
 """, unsafe_allow_html=True)
 
-# ==================== PRODUCT CATALOG (with sizes) ====================
-# Each product can have multiple sizes
+# ==================== PRODUCT CATALOG ====================
 PRODUCTS = {
-    # TEAS
+    # ========== TEAS ==========
     "tea_ginger": {
         "name": "Ginger Tea",
         "category": "Teas",
@@ -173,7 +172,7 @@ PRODUCTS = {
         ]
     },
 
-    # COFFEE
+    # ========== COFFEE ==========
     "coffee_kilimanjaro": {
         "name": "Kilimanjaro Arabica",
         "category": "Coffee",
@@ -186,11 +185,11 @@ PRODUCTS = {
         ]
     },
 
-    # KETO & SNACKS
+    # ========== SNACKS & COOKIES (all together) ==========
     "cookies_almond": {
         "name": "Almond Seed Cookies",
-        "category": "Keto & Snacks",
-        "desc": "No sugar. No flour. High protein. Perfect for keto & diabetics.",
+        "category": "Snacks & Cookies",
+        "desc": "No sugar. No flour. High protein. Perfect for keto, banting & diabetics.",
         "image": "cookies.png",
         "sizes": [
             {"label": "Pack of 8", "price": 95},
@@ -199,7 +198,7 @@ PRODUCTS = {
     },
     "granola_coconut": {
         "name": "Coconut Nut Granola",
-        "category": "Keto & Snacks",
+        "category": "Snacks & Cookies",
         "desc": "Low-carb clusters of coconut, nuts & seeds. No grains.",
         "image": "granola.png",
         "sizes": [
@@ -207,9 +206,19 @@ PRODUCTS = {
             {"label": "600g", "price": 200},
         ]
     },
+    "granola_menopause": {
+        "name": "Menopause Seed Granola",
+        "category": "Snacks & Cookies",
+        "desc": "Hormone-supportive blend of flax, pumpkin, sesame, sunflower & chia seeds. Ideal for menopause, blood sugar balance and keto lifestyles.",
+        "image": "menopause_granola.png",
+        "sizes": [
+            {"label": "300g", "price": 125},
+            {"label": "600g", "price": 230},
+        ]
+    },
     "butter_almond": {
         "name": "Almond Butter",
-        "category": "Keto & Snacks",
+        "category": "Snacks & Cookies",
         "desc": "100% pure almonds. Nothing added.",
         "image": "almond_butter.png",
         "sizes": [
@@ -220,7 +229,7 @@ PRODUCTS = {
     },
     "butter_cashew": {
         "name": "Cashew Butter",
-        "category": "Keto & Snacks",
+        "category": "Snacks & Cookies",
         "desc": "Smooth, pure cashew butter.",
         "image": "cashew_butter.png",
         "sizes": [
@@ -230,7 +239,7 @@ PRODUCTS = {
     },
     "butter_mixed": {
         "name": "Mixed Nut Butter",
-        "category": "Keto & Snacks",
+        "category": "Snacks & Cookies",
         "desc": "Powerful blend of almonds, cashews, walnuts & seeds.",
         "image": "mixed_butter.png",
         "sizes": [
@@ -240,7 +249,7 @@ PRODUCTS = {
     },
     "nuts_mixed": {
         "name": "Mixed Nuts & Seeds",
-        "category": "Keto & Snacks",
+        "category": "Snacks & Cookies",
         "desc": "Raw or lightly seasoned with Himalayan salt.",
         "image": "nuts.png",
         "sizes": [
@@ -250,7 +259,7 @@ PRODUCTS = {
     },
     "nuts_trio": {
         "name": "Trio Nut Mix",
-        "category": "Keto & Snacks",
+        "category": "Snacks & Cookies",
         "desc": "Almonds, cashews & peanuts with Himalayan salt.",
         "image": "trio_nuts.png",
         "sizes": [
@@ -258,8 +267,28 @@ PRODUCTS = {
             {"label": "600g", "price": 190},
         ]
     },
+    "seed_crackers": {
+        "name": "Seed Crackers",
+        "category": "Snacks & Cookies",
+        "desc": "Crispy flax, pumpkin and sesame seed crackers. Zero flour, keto-friendly.",
+        "image": "seed_crackers.png",
+        "sizes": [
+            {"label": "Pack of 12", "price": 85},
+            {"label": "Pack of 24", "price": 155},
+        ]
+    },
+    "coconut_clusters": {
+        "name": "Coconut Seed Clusters",
+        "category": "Snacks & Cookies",
+        "desc": "Crunchy coconut and seed clusters. Lightly sweetened with natural options.",
+        "image": "coconut_clusters.png",
+        "sizes": [
+            {"label": "200g", "price": 90},
+            {"label": "400g", "price": 165},
+        ]
+    },
 
-    # INFUSED HONEYS
+    # ========== INFUSED HONEYS ==========
     "honey_ginger": {
         "name": "Ginger Infused Honey",
         "category": "Infused Honeys",
@@ -291,7 +320,7 @@ PRODUCTS = {
         ]
     },
 
-    # POWDERS
+    # ========== POWDERS ==========
     "powder_moringa": {
         "name": "Moringa Powder",
         "category": "Powders",
@@ -322,8 +351,58 @@ PRODUCTS = {
             {"label": "250g", "price": 160},
         ]
     },
+    "powder_flax": {
+        "name": "Flaxseed Powder",
+        "category": "Powders",
+        "desc": "Freshly milled flaxseed. Excellent for hormones, digestion and menopause support.",
+        "image": "flax.png",
+        "sizes": [
+            {"label": "200g", "price": 85},
+            {"label": "400g", "price": 155},
+        ]
+    },
+    "powder_pumpkin": {
+        "name": "Pumpkin Seed Powder",
+        "category": "Powders",
+        "desc": "Rich in zinc and magnesium. Great for hormone balance.",
+        "image": "pumpkin_powder.png",
+        "sizes": [
+            {"label": "200g", "price": 95},
+            {"label": "400g", "price": 175},
+        ]
+    },
+    "powder_maca": {
+        "name": "Maca Powder",
+        "category": "Powders",
+        "desc": "Traditional hormone-supportive root. Supports energy and balance.",
+        "image": "maca.png",
+        "sizes": [
+            {"label": "100g", "price": 120},
+            {"label": "250g", "price": 260},
+        ]
+    },
+    "powder_beetroot": {
+        "name": "Beetroot Powder",
+        "category": "Powders",
+        "desc": "Natural energy and circulation support.",
+        "image": "beetroot.png",
+        "sizes": [
+            {"label": "100g", "price": 90},
+            {"label": "250g", "price": 195},
+        ]
+    },
+    "powder_spirulina": {
+        "name": "Spirulina Powder",
+        "category": "Powders",
+        "desc": "Nutrient-dense blue-green algae. High in protein and minerals.",
+        "image": "spirulina.png",
+        "sizes": [
+            {"label": "100g", "price": 130},
+            {"label": "250g", "price": 280},
+        ]
+    },
 
-    # OILS
+    # ========== OILS ==========
     "oil_olive": {
         "name": "Extra Virgin Olive Oil",
         "category": "Oils",
@@ -345,7 +424,7 @@ PRODUCTS = {
         ]
     },
 
-    # BATHING & HERBS
+    # ========== BATHING RITUALS ==========
     "bath_lavender": {
         "name": "Lavender Bathing Tea",
         "category": "Bathing Rituals",
@@ -366,6 +445,8 @@ PRODUCTS = {
             {"label": "150g", "price": 140},
         ]
     },
+
+    # ========== HERBS & SPICES ==========
     "herb_lavender": {
         "name": "Dried Lavender Flowers",
         "category": "Herbs & Spices",
@@ -410,7 +491,7 @@ PRODUCTS = {
 
 # ==================== SESSION STATE ====================
 if "cart" not in st.session_state:
-    st.session_state.cart = {}   # key = "product_id|size_label", value = qty
+    st.session_state.cart = {}
 
 def add_to_cart(product_id, size_label, price, qty=1):
     key = f"{product_id}|{size_label}|{price}"
@@ -418,7 +499,7 @@ def add_to_cart(product_id, size_label, price, qty=1):
         st.session_state.cart[key] += qty
     else:
         st.session_state.cart[key] = qty
-    st.toast(f"Added to cart", icon="🛒")
+    st.toast("Added to cart", icon="🛒")
 
 def remove_from_cart(key):
     if key in st.session_state.cart:
@@ -451,7 +532,7 @@ with st.sidebar:
     
     page = st.radio(
         "Menu",
-        ["Home", "Shop All", "Teas", "Keto & Snacks", "Honeys & Oils", "Powders & Herbs", "Bathing Rituals", "Cart & Order"],
+        ["Home", "Shop All", "Teas", "Coffee", "Snacks & Cookies", "Honeys & Oils", "Powders", "Bathing Rituals", "Herbs & Spices", "Cart & Order"],
         label_visibility="collapsed"
     )
     
@@ -466,20 +547,20 @@ with st.sidebar:
     else:
         st.info("Cart is empty")
 
-# ==================== HELPER: Show product card ====================
+# ==================== PRODUCT DISPLAY ====================
 def show_product(pid, p):
     img_path = f"assets/{p.get('image', '')}"
     
-    col_img, col_info = st.columns([1, 2])
+    col_img, col_info = st.columns([1, 2.2])
     
     with col_img:
         if os.path.exists(img_path):
             st.image(img_path, use_container_width=True)
         else:
             st.markdown(f"""
-            <div style="background:#EDE6DC; height:140px; border-radius:10px; 
-            display:flex; align-items:center; justify-content:center; color:#888;">
-                No image
+            <div style="background:#EDE6DC; height:130px; border-radius:10px; 
+            display:flex; align-items:center; justify-content:center; color:#999; font-size:0.9rem;">
+                Saina Naturals
             </div>
             """, unsafe_allow_html=True)
     
@@ -487,11 +568,8 @@ def show_product(pid, p):
         st.markdown(f"**{p['name']}**")
         st.caption(p['desc'])
         
-        # Size selector
         size_options = [f"{s['label']} — P {s['price']}" for s in p['sizes']]
-        selected = st.selectbox("Size / Pack", size_options, key=f"size_{pid}", label_visibility="collapsed")
-        
-        # Extract price and label
+        selected = st.selectbox("Size", size_options, key=f"size_{pid}", label_visibility="collapsed")
         selected_size = p['sizes'][size_options.index(selected)]
         
         qty = st.number_input("Qty", min_value=1, max_value=20, value=1, key=f"qty_{pid}")
@@ -500,7 +578,6 @@ def show_product(pid, p):
             add_to_cart(pid, selected_size['label'], selected_size['price'], qty)
 
 # ==================== PAGES ====================
-
 if page == "Home":
     st.markdown('<div style="text-align:center; padding: 1rem 0;">', unsafe_allow_html=True)
     if os.path.exists("assets/saina_logo.png"):
@@ -514,13 +591,40 @@ if page == "Home":
     st.markdown("---")
     st.markdown("### Healing foods & botanicals for modern Botswana")
     st.write(
-        "Keto-friendly • Diabetic-conscious • Rooted in natural wellness. "
-        "From our best-selling infused hibiscus to clean snacks, pure teas, powders and oils — "
-        "everything supports blood sugar balance, digestion and daily vitality."
+        "Keto-friendly • Diabetic-conscious • Hormone supportive. "
+        "From our best-selling infused hibiscus and menopause seed granola to pure teas, powders and clean snacks — "
+        "everything is chosen to support blood sugar balance, digestion and daily vitality."
     )
     st.write("**Located at Athena Gardens, Notwane, Gaborone**")
+    
+    st.markdown("#### Featured")
+    f1, f2, f3 = st.columns(3)
+    with f1:
+        st.markdown("""
+        <div class="product-card">
+            <h4>🌺 Infused Hibiscus</h4>
+            <p>Cloves × Cinnamon<br>Best Seller</p>
+            <p class="price">from P 120</p>
+        </div>
+        """, unsafe_allow_html=True)
+    with f2:
+        st.markdown("""
+        <div class="product-card">
+            <h4>🌾 Menopause Seed Granola</h4>
+            <p>Hormone supportive seeds<br>Keto & diabetic friendly</p>
+            <p class="price">from P 125</p>
+        </div>
+        """, unsafe_allow_html=True)
+    with f3:
+        st.markdown("""
+        <div class="product-card">
+            <h4>🍵 Healing Tea Variety</h4>
+            <p>Six pure botanical teas</p>
+            <p class="price">from P 280</p>
+        </div>
+        """, unsafe_allow_html=True)
 
-elif page in ["Shop All", "Teas", "Keto & Snacks", "Honeys & Oils", "Powders & Herbs", "Bathing Rituals"]:
+elif page in ["Shop All", "Teas", "Coffee", "Snacks & Cookies", "Honeys & Oils", "Powders", "Bathing Rituals", "Herbs & Spices"]:
     
     if page == "Shop All":
         filtered = PRODUCTS
@@ -528,26 +632,31 @@ elif page in ["Shop All", "Teas", "Keto & Snacks", "Honeys & Oils", "Powders & H
     elif page == "Teas":
         filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Teas"}
         st.markdown("## Healing Teas")
-    elif page == "Keto & Snacks":
-        filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Keto & Snacks"}
-        st.markdown("## Keto • Banting • Diabetic-Friendly")
+    elif page == "Coffee":
+        filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Coffee"}
+        st.markdown("## Coffee")
+    elif page == "Snacks & Cookies":
+        filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Snacks & Cookies"}
+        st.markdown("## Snacks & Cookies")
+        st.caption("All cookies, granolas, nut butters, nuts, seeds and keto snacks")
     elif page == "Honeys & Oils":
         filtered = {k:v for k,v in PRODUCTS.items() if v["category"] in ["Infused Honeys", "Oils"]}
         st.markdown("## Infused Honeys & Oils")
-    elif page == "Powders & Herbs":
-        filtered = {k:v for k,v in PRODUCTS.items() if v["category"] in ["Powders", "Herbs & Spices"]}
-        st.markdown("## Powders, Herbs & Spices")
+    elif page == "Powders":
+        filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Powders"}
+        st.markdown("## Powders")
     elif page == "Bathing Rituals":
         filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Bathing Rituals"}
         st.markdown("## Bathing & Ritual Teas")
+    elif page == "Herbs & Spices":
+        filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Herbs & Spices"}
+        st.markdown("## Herbs & Spices")
     
-    st.write("Elegant, clean and crafted for real wellness.")
     st.markdown("---")
     
     for pid, p in filtered.items():
-        with st.container():
-            show_product(pid, p)
-            st.markdown("---")
+        show_product(pid, p)
+        st.markdown("---")
 
 elif page == "Cart & Order":
     st.markdown("## Your Cart & Order")
@@ -556,7 +665,6 @@ elif page == "Cart & Order":
         st.info("Your cart is empty. Browse the shop and add items.")
         st.stop()
     
-    # Clear cart button at top
     if st.button("🗑 Clear Entire Cart"):
         clear_cart()
         st.rerun()
@@ -629,7 +737,7 @@ Thank you! We will confirm your order shortly.
 Athena Gardens, Notwane
 """
                 
-                whatsapp_number = "26771334355"  # Change if needed
+                whatsapp_number = "26771334355"  # ← Change this if needed
                 wa_url = f"https://wa.me/{whatsapp_number}?text={quote(message)}"
                 
                 st.success("Order ready!")
@@ -641,7 +749,6 @@ Athena Gardens, Notwane
                     </button>
                 </a>
                 """, unsafe_allow_html=True)
-                
                 st.info("Click the green button. WhatsApp will open with your complete order already written. Just press Send.")
 
 # Footer
