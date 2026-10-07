@@ -11,6 +11,17 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# ==================== PAYMENT & BUSINESS DETAILS ====================
+PAYMENT_DETAILS = {
+    "orange_money": "+267 71 334 355",  # Replace with your Orange Money number if different
+    "myzaka": "+267 71 334 355",        # Replace with your MyZaka/Smega/BTC number
+    "bank_name": "First National Bank Botswana (FNB)",
+    "account_name": "Saina Naturals",
+    "account_number": "1234567890",      # Replace with your actual account number
+    "branch_code": "281411",             # Replace with your branch code
+    "location": "Athena Gardens, Notwane, Gaborone"
+}
+
 # ==================== BRAND COLORS & FONTS ====================
 CREAM = "#F8F5F0"
 FOREST = "#2F3E2F"
@@ -83,6 +94,14 @@ div[data-testid="stSidebar"] {{
     border-radius: 10px;
     margin-bottom: 0.7rem;
     border: 1px solid {SAND};
+}}
+
+.payment-card {{
+    background: white;
+    padding: 1.2rem;
+    border-radius: 10px;
+    border: 1px solid {SAND};
+    margin-bottom: 1rem;
 }}
 </style>
 """, unsafe_allow_html=True)
@@ -185,7 +204,7 @@ PRODUCTS = {
         ]
     },
 
-    # ========== SNACKS & COOKIES (all together) ==========
+    # ========== SNACKS & COOKIES ==========
     "cookies_almond": {
         "name": "Almond Seed Cookies",
         "category": "Snacks & Cookies",
@@ -532,7 +551,7 @@ with st.sidebar:
     
     page = st.radio(
         "Menu",
-        ["Home", "Shop All", "Teas", "Coffee", "Snacks & Cookies", "Honeys & Oils", "Powders", "Bathing Rituals", "Herbs & Spices", "Cart & Order"],
+        ["Home", "Shop All", "Teas", "Coffee", "Snacks & Cookies", "Honeys & Oils", "Powders", "Bathing Rituals", "Herbs & Spices", "Payments & Delivery", "Cart & Order"],
         label_visibility="collapsed"
     )
     
@@ -595,7 +614,7 @@ if page == "Home":
         "From our best-selling infused hibiscus and menopause seed granola to pure teas, powders and clean snacks — "
         "everything is chosen to support blood sugar balance, digestion and daily vitality."
     )
-    st.write("**Located at Athena Gardens, Notwane, Gaborone**")
+    st.write(f"**Located at {PAYMENT_DETAILS['location']}**")
     
     st.markdown("#### Featured")
     f1, f2, f3 = st.columns(3)
@@ -658,6 +677,43 @@ elif page in ["Shop All", "Teas", "Coffee", "Snacks & Cookies", "Honeys & Oils",
         show_product(pid, p)
         st.markdown("---")
 
+elif page == "Payments & Delivery":
+    st.markdown("## Payment Methods & Collection")
+    st.caption("Please review payment details and collection instructions prior to placing your order.")
+    
+    c1, c2 = st.columns(2)
+    
+    with c1:
+        st.markdown(f"""
+        <div class="payment-card">
+            <h4>📱 Mobile Money</h4>
+            <p><strong>Orange Money:</strong> {PAYMENT_DETAILS['orange_money']}</p>
+            <p><strong>MyZaka / BTC / Smega:</strong> {PAYMENT_DETAILS['myzaka']}</p>
+            <p style="font-size:0.85rem; color:#666;">Use your full name or WhatsApp number as payment reference.</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown(f"""
+        <div class="payment-card">
+            <h4>🏦 Bank Transfer (EFT)</h4>
+            <p><strong>Bank:</strong> {PAYMENT_DETAILS['bank_name']}</p>
+            <p><strong>Account Name:</strong> {PAYMENT_DETAILS['account_name']}</p>
+            <p><strong>Account Number:</strong> {PAYMENT_DETAILS['account_number']}</p>
+            <p><strong>Branch Code:</strong> {PAYMENT_DETAILS['branch_code']}</p>
+            <p style="font-size:0.85rem; color:#666;">Send POP (Proof of Payment) via WhatsApp for quick dispatch.</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+    with c2:
+        st.markdown(f"""
+        <div class="payment-card">
+            <h4>📍 Collection & Delivery Info</h4>
+            <p><strong>Location:</strong> {PAYMENT_DETAILS['location']}</p>
+            <p><strong>Collection:</strong> Orders can be collected from Athena Gardens once payment confirmation is received.</p>
+            <p><strong>Delivery:</strong> Local Gaborone delivery can be arranged on WhatsApp upon checkout.</p>
+        </div>
+        """, unsafe_allow_html=True)
+
 elif page == "Cart & Order":
     st.markdown("## Your Cart & Order")
     
@@ -703,7 +759,13 @@ elif page == "Cart & Order":
     st.markdown("---")
     st.markdown(f"### Total: **P {total:.2f}**")
     
-    st.markdown("### Customer Details")
+    st.markdown("### Customer Details & Checkout")
+    
+    payment_choice = st.selectbox(
+        "Preferred Payment Method *",
+        ["Orange Money", "MyZaka / BTC", "Bank Transfer (EFT)", "Cash on Collection"]
+    )
+    
     with st.form("order_form"):
         name = st.text_input("Full Name *")
         phone = st.text_input("WhatsApp Number *", placeholder="+267 7X XXX XXX")
@@ -722,6 +784,7 @@ elif page == "Cart & Order":
 *Customer:* {name}
 *WhatsApp:* {phone}
 {f'*Email:* {email}' if email else ''}
+*Payment Method:* {payment_choice}
 {f'*Notes:* {address}' if address else ''}
 {f'*Special instructions:* {notes}' if notes else ''}
 
@@ -733,11 +796,18 @@ elif page == "Cart & Order":
                 message += f"""
 *Total: P {total:.2f}*
 
-Thank you! We will confirm your order shortly.
-Athena Gardens, Notwane
+*Payment Details:*
+• Orange Money: {PAYMENT_DETAILS['orange_money']}
+• MyZaka/BTC: {PAYMENT_DETAILS['myzaka']}
+• Bank: {PAYMENT_DETAILS['bank_name']} | Acc: {PAYMENT_DETAILS['account_number']} ({PAYMENT_DETAILS['account_name']})
+
+*Collection Location:*
+{PAYMENT_DETAILS['location']}
+
+Thank you! We will confirm your order and payment shortly.
 """
                 
-                whatsapp_number = "26771334355"  # ← Change this if needed
+                whatsapp_number = "26771334355"
                 wa_url = f"https://wa.me/{whatsapp_number}?text={quote(message)}"
                 
                 st.success("Order ready!")
@@ -749,12 +819,12 @@ Athena Gardens, Notwane
                     </button>
                 </a>
                 """, unsafe_allow_html=True)
-                st.info("Click the green button. WhatsApp will open with your complete order already written. Just press Send.")
+                st.info("Click the green button to open WhatsApp with your complete order and payment details pre-filled.")
 
 # Footer
 st.markdown("---")
 st.markdown(
     f"<p style='text-align:center; color:{OLIVE}; font-size:0.85rem;'>"
-    "Saina Naturals · Athena Gardens, Notwane, Gaborone · +267 71 334 355</p>",
+    f"Saina Naturals · {PAYMENT_DETAILS['location']} · +267 71 334 355</p>",
     unsafe_allow_html=True
 )
