@@ -84,408 +84,309 @@ div[data-testid="stSidebar"] {{
     margin-bottom: 0.7rem;
     border: 1px solid {SAND};
 }}
+
+.payment-box {{
+    background: white;
+    border-radius: 12px;
+    padding: 1.4rem;
+    border: 1px solid {SAND};
+    margin-bottom: 1rem;
+}}
 </style>
 """, unsafe_allow_html=True)
 
+# ==================== PAYMENT DETAILS (EDIT THESE) ====================
+ORANGE_MONEY = "7X XXX XXXX"          # ← Replace with your Orange Money number
+MYZAKA = "7X XXX XXXX"                # ← Replace with your MyZaka / BTC number
+BANK_NAME = "First National Bank"     # ← e.g. FNB, Stanbic, Absa
+ACCOUNT_NAME = "Saina Naturals"       # ← Account name
+ACCOUNT_NUMBER = "XXXXXXXXXX"         # ← Your account number
+BRANCH_CODE = "XXXXXX"                # ← Branch code
+
+WHATSAPP_NUMBER = "26771334355"       # Your WhatsApp number (without +)
+
 # ==================== PRODUCT CATALOG ====================
 PRODUCTS = {
-    # ========== TEAS ==========
+    # TEAS
     "tea_ginger": {
         "name": "Ginger Tea",
         "category": "Teas",
         "desc": "Warming digestive tea. Supports digestion and circulation.",
         "image": "ginger.png",
-        "sizes": [
-            {"label": "Box of 20 sachets", "price": 85},
-            {"label": "Box of 40 sachets", "price": 155},
-        ]
+        "sizes": [{"label": "Box of 20 sachets", "price": 85}, {"label": "Box of 40 sachets", "price": 155}]
     },
     "tea_peppermint": {
         "name": "Peppermint Tea",
         "category": "Teas",
         "desc": "Cooling and clarifying. Soothes the stomach.",
         "image": "peppermint.png",
-        "sizes": [
-            {"label": "Box of 20 sachets", "price": 85},
-            {"label": "Box of 40 sachets", "price": 155},
-        ]
+        "sizes": [{"label": "Box of 20 sachets", "price": 85}, {"label": "Box of 40 sachets", "price": 155}]
     },
     "tea_moringa": {
         "name": "Moringa Tea",
         "category": "Teas",
         "desc": "Nutrient-dense superfood leaves.",
         "image": "moringa.png",
-        "sizes": [
-            {"label": "Box of 20 sachets", "price": 95},
-            {"label": "Box of 40 sachets", "price": 175},
-        ]
+        "sizes": [{"label": "Box of 20 sachets", "price": 95}, {"label": "Box of 40 sachets", "price": 175}]
     },
     "tea_hibiscus": {
         "name": "Hibiscus Tea",
         "category": "Teas",
         "desc": "Tart floral tea traditionally used for metabolic balance.",
         "image": "hibiscus.png",
-        "sizes": [
-            {"label": "Box of 20 sachets", "price": 90},
-            {"label": "Box of 40 sachets", "price": 165},
-        ]
+        "sizes": [{"label": "Box of 20 sachets", "price": 90}, {"label": "Box of 40 sachets", "price": 165}]
     },
     "tea_avocado": {
         "name": "Avocado Leaf Tea",
         "category": "Teas",
         "desc": "Gentle, earthy and nourishing.",
         "image": "avocado.png",
-        "sizes": [
-            {"label": "Box of 20 sachets", "price": 90},
-            {"label": "Box of 40 sachets", "price": 165},
-        ]
+        "sizes": [{"label": "Box of 20 sachets", "price": 90}, {"label": "Box of 40 sachets", "price": 165}]
     },
     "tea_lemongrass": {
         "name": "Lemongrass Tea",
         "category": "Teas",
         "desc": "Uplifting citrus notes that calm the nervous system.",
         "image": "lemongrass.png",
-        "sizes": [
-            {"label": "Box of 20 sachets", "price": 85},
-            {"label": "Box of 40 sachets", "price": 155},
-        ]
+        "sizes": [{"label": "Box of 20 sachets", "price": 85}, {"label": "Box of 40 sachets", "price": 155}]
     },
     "tea_variety": {
         "name": "Healing Tea Variety Pack",
         "category": "Teas",
         "desc": "Ginger, Peppermint, Moringa, Hibiscus, Avocado Leaf & Lemongrass.",
         "image": "variety.png",
-        "sizes": [
-            {"label": "6 teas (5 sachets each)", "price": 280},
-            {"label": "6 teas (10 sachets each)", "price": 480},
-        ]
+        "sizes": [{"label": "6 teas (5 sachets each)", "price": 280}, {"label": "6 teas (10 sachets each)", "price": 480}]
     },
     "hibiscus_loose": {
         "name": "Infused Hibiscus Flowers",
         "category": "Teas",
         "desc": "Best-seller. Loose hibiscus infused with cloves & cinnamon.",
         "image": "hibiscus_loose.png",
-        "sizes": [
-            {"label": "100g", "price": 120},
-            {"label": "250g", "price": 260},
-            {"label": "500g", "price": 480},
-        ]
+        "sizes": [{"label": "100g", "price": 120}, {"label": "250g", "price": 260}, {"label": "500g", "price": 480}]
     },
 
-    # ========== COFFEE ==========
+    # COFFEE
     "coffee_kilimanjaro": {
         "name": "Kilimanjaro Arabica",
         "category": "Coffee",
         "desc": "Pure Arabica beans. Clean energy, carefully sourced.",
         "image": "coffee.png",
-        "sizes": [
-            {"label": "250g whole beans", "price": 95},
-            {"label": "500g whole beans", "price": 180},
-            {"label": "1kg whole beans", "price": 340},
-        ]
+        "sizes": [{"label": "250g whole beans", "price": 95}, {"label": "500g whole beans", "price": 180}, {"label": "1kg whole beans", "price": 340}]
     },
 
-    # ========== SNACKS & COOKIES (all together) ==========
+    # SNACKS & COOKIES
     "cookies_almond": {
         "name": "Almond Seed Cookies",
         "category": "Snacks & Cookies",
         "desc": "No sugar. No flour. High protein. Perfect for keto, banting & diabetics.",
         "image": "cookies.png",
-        "sizes": [
-            {"label": "Pack of 8", "price": 95},
-            {"label": "Pack of 16", "price": 175},
-        ]
+        "sizes": [{"label": "Pack of 8", "price": 95}, {"label": "Pack of 16", "price": 175}]
     },
     "granola_coconut": {
         "name": "Coconut Nut Granola",
         "category": "Snacks & Cookies",
         "desc": "Low-carb clusters of coconut, nuts & seeds. No grains.",
         "image": "granola.png",
-        "sizes": [
-            {"label": "300g", "price": 110},
-            {"label": "600g", "price": 200},
-        ]
+        "sizes": [{"label": "300g", "price": 110}, {"label": "600g", "price": 200}]
     },
     "granola_menopause": {
         "name": "Menopause Seed Granola",
         "category": "Snacks & Cookies",
         "desc": "Hormone-supportive blend of flax, pumpkin, sesame, sunflower & chia seeds. Ideal for menopause, blood sugar balance and keto lifestyles.",
         "image": "menopause_granola.png",
-        "sizes": [
-            {"label": "300g", "price": 125},
-            {"label": "600g", "price": 230},
-        ]
+        "sizes": [{"label": "300g", "price": 125}, {"label": "600g", "price": 230}]
     },
     "butter_almond": {
         "name": "Almond Butter",
         "category": "Snacks & Cookies",
         "desc": "100% pure almonds. Nothing added.",
         "image": "almond_butter.png",
-        "sizes": [
-            {"label": "250g", "price": 110},
-            {"label": "350g", "price": 145},
-            {"label": "500g", "price": 195},
-        ]
+        "sizes": [{"label": "250g", "price": 110}, {"label": "350g", "price": 145}, {"label": "500g", "price": 195}]
     },
     "butter_cashew": {
         "name": "Cashew Butter",
         "category": "Snacks & Cookies",
         "desc": "Smooth, pure cashew butter.",
         "image": "cashew_butter.png",
-        "sizes": [
-            {"label": "250g", "price": 120},
-            {"label": "350g", "price": 155},
-        ]
+        "sizes": [{"label": "250g", "price": 120}, {"label": "350g", "price": 155}]
     },
     "butter_mixed": {
         "name": "Mixed Nut Butter",
         "category": "Snacks & Cookies",
         "desc": "Powerful blend of almonds, cashews, walnuts & seeds.",
         "image": "mixed_butter.png",
-        "sizes": [
-            {"label": "250g", "price": 125},
-            {"label": "350g", "price": 160},
-        ]
+        "sizes": [{"label": "250g", "price": 125}, {"label": "350g", "price": 160}]
     },
     "nuts_mixed": {
         "name": "Mixed Nuts & Seeds",
         "category": "Snacks & Cookies",
         "desc": "Raw or lightly seasoned with Himalayan salt.",
         "image": "nuts.png",
-        "sizes": [
-            {"label": "250g", "price": 95},
-            {"label": "500g", "price": 175},
-        ]
+        "sizes": [{"label": "250g", "price": 95}, {"label": "500g", "price": 175}]
     },
     "nuts_trio": {
         "name": "Trio Nut Mix",
         "category": "Snacks & Cookies",
         "desc": "Almonds, cashews & peanuts with Himalayan salt.",
         "image": "trio_nuts.png",
-        "sizes": [
-            {"label": "300g", "price": 105},
-            {"label": "600g", "price": 190},
-        ]
+        "sizes": [{"label": "300g", "price": 105}, {"label": "600g", "price": 190}]
     },
     "seed_crackers": {
         "name": "Seed Crackers",
         "category": "Snacks & Cookies",
         "desc": "Crispy flax, pumpkin and sesame seed crackers. Zero flour, keto-friendly.",
         "image": "seed_crackers.png",
-        "sizes": [
-            {"label": "Pack of 12", "price": 85},
-            {"label": "Pack of 24", "price": 155},
-        ]
+        "sizes": [{"label": "Pack of 12", "price": 85}, {"label": "Pack of 24", "price": 155}]
     },
     "coconut_clusters": {
         "name": "Coconut Seed Clusters",
         "category": "Snacks & Cookies",
-        "desc": "Crunchy coconut and seed clusters. Lightly sweetened with natural options.",
+        "desc": "Crunchy coconut and seed clusters.",
         "image": "coconut_clusters.png",
-        "sizes": [
-            {"label": "200g", "price": 90},
-            {"label": "400g", "price": 165},
-        ]
+        "sizes": [{"label": "200g", "price": 90}, {"label": "400g", "price": 165}]
     },
 
-    # ========== INFUSED HONEYS ==========
+    # INFUSED HONEYS
     "honey_ginger": {
         "name": "Ginger Infused Honey",
         "category": "Infused Honeys",
         "desc": "Raw honey gently infused with ginger.",
         "image": "honey_ginger.png",
-        "sizes": [
-            {"label": "250g", "price": 110},
-            {"label": "500g", "price": 200},
-        ]
+        "sizes": [{"label": "250g", "price": 110}, {"label": "500g", "price": 200}]
     },
     "honey_turmeric": {
         "name": "Turmeric Immune Honey",
         "category": "Infused Honeys",
         "desc": "Immune-supportive turmeric & honey blend.",
         "image": "honey_turmeric.png",
-        "sizes": [
-            {"label": "250g", "price": 120},
-            {"label": "500g", "price": 220},
-        ]
+        "sizes": [{"label": "250g", "price": 120}, {"label": "500g", "price": 220}]
     },
     "honey_metabolic": {
         "name": "Metabolic Boost Honey",
         "category": "Infused Honeys",
         "desc": "Supports metabolism and natural energy.",
         "image": "honey_metabolic.png",
-        "sizes": [
-            {"label": "250g", "price": 125},
-            {"label": "500g", "price": 230},
-        ]
+        "sizes": [{"label": "250g", "price": 125}, {"label": "500g", "price": 230}]
     },
 
-    # ========== POWDERS ==========
+    # POWDERS
     "powder_moringa": {
         "name": "Moringa Powder",
         "category": "Powders",
         "desc": "Pure moringa leaf powder. Nutrient dense.",
         "image": "moringa_powder.png",
-        "sizes": [
-            {"label": "100g", "price": 95},
-            {"label": "250g", "price": 210},
-        ]
+        "sizes": [{"label": "100g", "price": 95}, {"label": "250g", "price": 210}]
     },
     "powder_baobab": {
         "name": "Baobab Powder",
         "category": "Powders",
         "desc": "Vitamin C rich African superfruit powder.",
         "image": "baobab.png",
-        "sizes": [
-            {"label": "100g", "price": 110},
-            {"label": "250g", "price": 240},
-        ]
+        "sizes": [{"label": "100g", "price": 110}, {"label": "250g", "price": 240}]
     },
     "powder_turmeric": {
         "name": "Turmeric Powder",
         "category": "Powders",
         "desc": "Pure turmeric root powder.",
         "image": "turmeric.png",
-        "sizes": [
-            {"label": "100g", "price": 75},
-            {"label": "250g", "price": 160},
-        ]
+        "sizes": [{"label": "100g", "price": 75}, {"label": "250g", "price": 160}]
     },
     "powder_flax": {
         "name": "Flaxseed Powder",
         "category": "Powders",
         "desc": "Freshly milled flaxseed. Excellent for hormones, digestion and menopause support.",
         "image": "flax.png",
-        "sizes": [
-            {"label": "200g", "price": 85},
-            {"label": "400g", "price": 155},
-        ]
+        "sizes": [{"label": "200g", "price": 85}, {"label": "400g", "price": 155}]
     },
     "powder_pumpkin": {
         "name": "Pumpkin Seed Powder",
         "category": "Powders",
         "desc": "Rich in zinc and magnesium. Great for hormone balance.",
         "image": "pumpkin_powder.png",
-        "sizes": [
-            {"label": "200g", "price": 95},
-            {"label": "400g", "price": 175},
-        ]
+        "sizes": [{"label": "200g", "price": 95}, {"label": "400g", "price": 175}]
     },
     "powder_maca": {
         "name": "Maca Powder",
         "category": "Powders",
         "desc": "Traditional hormone-supportive root. Supports energy and balance.",
         "image": "maca.png",
-        "sizes": [
-            {"label": "100g", "price": 120},
-            {"label": "250g", "price": 260},
-        ]
+        "sizes": [{"label": "100g", "price": 120}, {"label": "250g", "price": 260}]
     },
     "powder_beetroot": {
         "name": "Beetroot Powder",
         "category": "Powders",
         "desc": "Natural energy and circulation support.",
         "image": "beetroot.png",
-        "sizes": [
-            {"label": "100g", "price": 90},
-            {"label": "250g", "price": 195},
-        ]
+        "sizes": [{"label": "100g", "price": 90}, {"label": "250g", "price": 195}]
     },
     "powder_spirulina": {
         "name": "Spirulina Powder",
         "category": "Powders",
         "desc": "Nutrient-dense blue-green algae. High in protein and minerals.",
         "image": "spirulina.png",
-        "sizes": [
-            {"label": "100g", "price": 130},
-            {"label": "250g", "price": 280},
-        ]
+        "sizes": [{"label": "100g", "price": 130}, {"label": "250g", "price": 280}]
     },
 
-    # ========== OILS ==========
+    # OILS
     "oil_olive": {
         "name": "Extra Virgin Olive Oil",
         "category": "Oils",
         "desc": "Premium cold-pressed olive oil.",
         "image": "olive_oil.png",
-        "sizes": [
-            {"label": "250ml", "price": 95},
-            {"label": "500ml", "price": 165},
-        ]
+        "sizes": [{"label": "250ml", "price": 95}, {"label": "500ml", "price": 165}]
     },
     "oil_coconut": {
         "name": "Virgin Coconut Oil",
         "category": "Oils",
         "desc": "Cold-pressed virgin coconut oil.",
         "image": "coconut_oil.png",
-        "sizes": [
-            {"label": "250ml", "price": 55},
-            {"label": "500ml", "price": 95},
-        ]
+        "sizes": [{"label": "250ml", "price": 55}, {"label": "500ml", "price": 95}]
     },
 
-    # ========== BATHING RITUALS ==========
+    # BATHING
     "bath_lavender": {
         "name": "Lavender Bathing Tea",
         "category": "Bathing Rituals",
         "desc": "Calming floral soak for evening rituals.",
         "image": "lavender.png",
-        "sizes": [
-            {"label": "80g", "price": 85},
-            {"label": "150g", "price": 150},
-        ]
+        "sizes": [{"label": "80g", "price": 85}, {"label": "150g", "price": 150}]
     },
     "bath_chamomile": {
         "name": "Chamomile Bathing Tea",
         "category": "Bathing Rituals",
         "desc": "Soft, soothing flowers for restful soaks.",
         "image": "chamomile.png",
-        "sizes": [
-            {"label": "80g", "price": 80},
-            {"label": "150g", "price": 140},
-        ]
+        "sizes": [{"label": "80g", "price": 80}, {"label": "150g", "price": 140}]
     },
 
-    # ========== HERBS & SPICES ==========
+    # HERBS & SPICES
     "herb_lavender": {
         "name": "Dried Lavender Flowers",
         "category": "Herbs & Spices",
         "desc": "Pure dried lavender for tea or bathing.",
         "image": "lavender.png",
-        "sizes": [
-            {"label": "50g", "price": 70},
-            {"label": "100g", "price": 125},
-        ]
+        "sizes": [{"label": "50g", "price": 70}, {"label": "100g", "price": 125}]
     },
     "herb_chamomile": {
         "name": "Dried Chamomile Flowers",
         "category": "Herbs & Spices",
         "desc": "Gentle dried chamomile flowers.",
         "image": "chamomile.png",
-        "sizes": [
-            {"label": "50g", "price": 65},
-            {"label": "100g", "price": 115},
-        ]
+        "sizes": [{"label": "50g", "price": 65}, {"label": "100g", "price": 115}]
     },
     "spice_cinnamon": {
         "name": "Ceylon Cinnamon Sticks",
         "category": "Herbs & Spices",
         "desc": "True Ceylon cinnamon sticks.",
         "image": "cinnamon.png",
-        "sizes": [
-            {"label": "50g", "price": 55},
-            {"label": "100g", "price": 95},
-        ]
+        "sizes": [{"label": "50g", "price": 55}, {"label": "100g", "price": 95}]
     },
     "spice_cloves": {
         "name": "Whole Cloves",
         "category": "Herbs & Spices",
         "desc": "Aromatic whole cloves.",
         "image": "cloves.png",
-        "sizes": [
-            {"label": "50g", "price": 45},
-            {"label": "100g", "price": 80},
-        ]
+        "sizes": [{"label": "50g", "price": 45}, {"label": "100g", "price": 80}]
     },
 }
 
@@ -532,7 +433,7 @@ with st.sidebar:
     
     page = st.radio(
         "Menu",
-        ["Home", "Shop All", "Teas", "Coffee", "Snacks & Cookies", "Honeys & Oils", "Powders", "Bathing Rituals", "Herbs & Spices", "Cart & Order"],
+        ["Home", "Shop All", "Teas", "Coffee", "Snacks & Cookies", "Honeys & Oils", "Powders", "Bathing Rituals", "Herbs & Spices", "Payment Methods", "Cart & Order"],
         label_visibility="collapsed"
     )
     
@@ -623,6 +524,47 @@ if page == "Home":
             <p class="price">from P 280</p>
         </div>
         """, unsafe_allow_html=True)
+
+elif page == "Payment Methods":
+    st.markdown("## Payment Methods")
+    st.write("We currently accept the following payment methods. Payment is required before or on collection.")
+    
+    st.markdown(f"""
+    <div class="payment-box">
+        <h4>Orange Money</h4>
+        <p>Send payment to: <strong>{ORANGE_MONEY}</strong></p>
+        <p>Use your order name as reference.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.markdown(f"""
+    <div class="payment-box">
+        <h4>MyZaka / BTC Mobile Money</h4>
+        <p>Send payment to: <strong>{MYZAKA}</strong></p>
+        <p>Use your order name as reference.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.markdown(f"""
+    <div class="payment-box">
+        <h4>Bank Transfer</h4>
+        <p><strong>Bank:</strong> {BANK_NAME}<br>
+        <strong>Account Name:</strong> {ACCOUNT_NAME}<br>
+        <strong>Account Number:</strong> {ACCOUNT_NUMBER}<br>
+        <strong>Branch Code:</strong> {BRANCH_CODE}</p>
+        <p>Please use your name as the payment reference.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.markdown("""
+    <div class="payment-box">
+        <h4>Collection at Athena Gardens</h4>
+        <p>You may also pay cash on collection at Athena Gardens, Notwane, Gaborone.</p>
+        <p>Please confirm your order on WhatsApp first so we can prepare it for you.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.info("After placing your order via WhatsApp, we will confirm stock and send you payment instructions if needed.")
 
 elif page in ["Shop All", "Teas", "Coffee", "Snacks & Cookies", "Honeys & Oils", "Powders", "Bathing Rituals", "Herbs & Spices"]:
     
@@ -722,7 +664,7 @@ elif page == "Cart & Order":
 *Customer:* {name}
 *WhatsApp:* {phone}
 {f'*Email:* {email}' if email else ''}
-{f'*Notes:* {address}' if address else ''}
+{f'*Collection/Delivery:* {address}' if address else ''}
 {f'*Special instructions:* {notes}' if notes else ''}
 
 *Order Details:*
@@ -733,12 +675,21 @@ elif page == "Cart & Order":
                 message += f"""
 *Total: P {total:.2f}*
 
-Thank you! We will confirm your order shortly.
-Athena Gardens, Notwane
+*Payment Options:*
+• Orange Money: {ORANGE_MONEY}
+• MyZaka: {MYZAKA}
+• Bank Transfer: {BANK_NAME}
+  Account: {ACCOUNT_NAME}
+  Number: {ACCOUNT_NUMBER}
+  Branch: {BRANCH_CODE}
+
+Please pay and send proof of payment. 
+Collection at Athena Gardens, Notwane, Gaborone.
+
+Thank you!
 """
                 
-                whatsapp_number = "26771334355"  # ← Change this if needed
-                wa_url = f"https://wa.me/{whatsapp_number}?text={quote(message)}"
+                wa_url = f"https://wa.me/{WHATSAPP_NUMBER}?text={quote(message)}"
                 
                 st.success("Order ready!")
                 st.markdown(f"""
@@ -749,7 +700,7 @@ Athena Gardens, Notwane
                     </button>
                 </a>
                 """, unsafe_allow_html=True)
-                st.info("Click the green button. WhatsApp will open with your complete order already written. Just press Send.")
+                st.info("Click the green button. WhatsApp will open with your complete order + payment details already written. Just press Send.")
 
 # Footer
 st.markdown("---")
