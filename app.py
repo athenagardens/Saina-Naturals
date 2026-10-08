@@ -104,7 +104,7 @@ ACCOUNT_NUMBER = "12345"
 BRANCH_CODE = "14445"
 
 WHATSAPP_NUMBER = "26774501880"
-SHIPPING_FEE = 30          # P30 within Gaborone
+SHIPPING_FEE = 30
 MIN_ORDER_FOR_SHIPPING = 200
 
 # ==================== PRODUCT CATALOG ====================
@@ -153,13 +153,88 @@ PRODUCTS = {
     "coconut_clusters": {"name": "Coconut Seed Clusters", "category": "Snacks & Cookies", "desc": "Crunchy coconut and seed clusters.", "image": "coconut_clusters.png",
                          "sizes": [{"label": "200g", "price": 90}, {"label": "400g", "price": 165}]},
 
-    # HONEYS
-    "honey_ginger": {"name": "Ginger Infused Honey", "category": "Infused Honeys", "desc": "Raw honey gently infused with ginger.", "image": "honey_ginger.png",
-                     "sizes": [{"label": "250g", "price": 110}, {"label": "500g", "price": 200}]},
-    "honey_turmeric": {"name": "Turmeric Immune Honey", "category": "Infused Honeys", "desc": "Immune-supportive turmeric & honey blend.", "image": "honey_turmeric.png",
-                       "sizes": [{"label": "250g", "price": 120}, {"label": "500g", "price": 220}]},
-    "honey_metabolic": {"name": "Metabolic Boost Honey", "category": "Infused Honeys", "desc": "Supports metabolism and natural energy.", "image": "honey_metabolic.png",
-                        "sizes": [{"label": "250g", "price": 125}, {"label": "500g", "price": 230}]},
+    # FLOURS
+    "flour_almond": {
+        "name": "Almond Flour",
+        "category": "Flours",
+        "desc": "Finely milled almonds. Perfect for keto cookies, cakes, pancakes and coatings. Sugar-free & gluten-free.",
+        "image": "almond_flour.png",
+        "sizes": [{"label": "250g", "price": 95}, {"label": "500g", "price": 175}]
+    },
+    "flour_coconut": {
+        "name": "Coconut Flour",
+        "category": "Flours",
+        "desc": "High-fibre, low-carb coconut flour. Excellent for pancakes, muffins, energy balls and thickening. Sugar-free & gluten-free.",
+        "image": "coconut_flour.png",
+        "sizes": [{"label": "250g", "price": 85}, {"label": "500g", "price": 155}]
+    },
+    "flour_flax": {
+        "name": "Flaxseed Flour",
+        "category": "Flours",
+        "desc": "Freshly milled flaxseed. Ideal for baking, smoothies, hormone support and as a binding agent. Sugar-free & gluten-free.",
+        "image": "flax_flour.png",
+        "sizes": [{"label": "250g", "price": 90}, {"label": "500g", "price": 165}]
+    },
+    "flour_pumpkin": {
+        "name": "Pumpkin Seed Flour",
+        "category": "Flours",
+        "desc": "Zinc-rich pumpkin seed flour. Great for savoury baking, protein boost and hormone balance. Sugar-free & gluten-free.",
+        "image": "pumpkin_flour.png",
+        "sizes": [{"label": "250g", "price": 95}, {"label": "500g", "price": 175}]
+    },
+
+    # SWEETENERS
+    "sweetener_honey": {
+        "name": "Raw Honey",
+        "category": "Sweeteners",
+        "desc": "Pure raw honey. A whole-food natural sweetener. Contains natural sugars – not sugar-free. Perfect for tea, baking and everyday use.",
+        "image": "honey_raw.png",
+        "sizes": [{"label": "250g", "price": 95}, {"label": "500g", "price": 175}]
+    },
+    "sweetener_date": {
+        "name": "Date Syrup",
+        "category": "Sweeteners",
+        "desc": "100% pure date syrup. A whole-food natural sweetener made from dates. Contains natural sugars – not sugar-free. Rich caramel flavour, ideal for baking and porridge.",
+        "image": "date_syrup.png",
+        "sizes": [{"label": "250g", "price": 110}, {"label": "500g", "price": 200}]
+    },
+    "sweetener_monk": {
+        "name": "Monk Fruit Sweetener",
+        "category": "Sweeteners",
+        "desc": "Zero-calorie, sugar-free natural sweetener. Ideal for keto, diabetic and blood-sugar friendly lifestyles.",
+        "image": "monk_fruit.png",
+        "sizes": [{"label": "100g", "price": 145}, {"label": "250g", "price": 295}]
+    },
+    "sweetener_stevia": {
+        "name": "Stevia Leaf Powder",
+        "category": "Sweeteners",
+        "desc": "Pure stevia leaf powder. Zero-calorie and sugar-free. Very concentrated – a little goes a long way.",
+        "image": "stevia.png",
+        "sizes": [{"label": "50g", "price": 95}, {"label": "100g", "price": 175}]
+    },
+
+    # INFUSED HONEYS
+    "honey_ginger": {
+        "name": "Ginger Infused Honey",
+        "category": "Infused Honeys",
+        "desc": "Raw honey gently infused with fresh ginger. Supports digestion, soothes the stomach, and provides natural warmth. Ideal for tea or taken by the spoon.",
+        "image": "honey_ginger.png",
+        "sizes": [{"label": "250g", "price": 110}, {"label": "500g", "price": 200}]
+    },
+    "honey_turmeric": {
+        "name": "Turmeric Infused Honey",
+        "category": "Infused Honeys",
+        "desc": "Raw honey infused with turmeric. Traditionally used to support immunity, reduce inflammation, and promote overall wellness.",
+        "image": "honey_turmeric.png",
+        "sizes": [{"label": "250g", "price": 120}, {"label": "500g", "price": 220}]
+    },
+    "honey_lemon_cinnamon": {
+        "name": "Lemon & Cinnamon Infused Honey",
+        "category": "Infused Honeys",
+        "desc": "Raw honey infused with lemon and cinnamon. Supports immunity, aids digestion, and offers a bright, warming flavour. Excellent in tea or as a daily tonic.",
+        "image": "honey_lemon_cinnamon.png",
+        "sizes": [{"label": "250g", "price": 115}, {"label": "500g", "price": 210}]
+    },
 
     # POWDERS
     "powder_moringa": {"name": "Moringa Powder", "category": "Powders", "desc": "Pure moringa leaf powder. Nutrient dense.", "image": "moringa_powder.png",
@@ -245,7 +320,7 @@ with st.sidebar:
     
     page = st.radio(
         "Menu",
-        ["Home", "Shop All", "Teas", "Coffee", "Snacks & Cookies", "Honeys & Oils", "Powders", "Bathing Rituals", "Herbs & Spices", "Payment & Shipping", "Cart & Order"],
+        ["Home", "Shop All", "Teas", "Coffee", "Snacks & Cookies", "Flours", "Sweeteners", "Infused Honeys", "Honeys & Oils", "Powders", "Bathing Rituals", "Herbs & Spices", "Payment & Shipping", "Cart & Order"],
         label_visibility="collapsed"
     )
     
@@ -304,36 +379,43 @@ if page == "Home":
     st.markdown("---")
     st.markdown("### Healing foods & botanicals for modern Botswana")
     st.write(
-        "Keto-friendly • Diabetic-conscious • Hormone supportive. "
-        "From our best-selling infused hibiscus and menopause seed granola to pure teas, powders and clean snacks — "
-        "everything is chosen to support blood sugar balance, digestion and daily vitality."
+        "Keto-friendly • Diabetic-conscious • Hormone supportive • Sugar-free & Gluten-free options available. "
+        "From our best-selling infused hibiscus and menopause seed granola to pure teas, flours, natural sweeteners and clean snacks."
     )
     st.write("**Located at Athena Gardens, Notwane, Gaborone**")
     
     st.markdown("#### Featured")
-    f1, f2, f3 = st.columns(3)
+    f1, f2, f3, f4 = st.columns(4)
     with f1:
         st.markdown("""
         <div class="product-card">
             <h4>🌺 Infused Hibiscus</h4>
-            <p>Cloves × Cinnamon<br>Best Seller</p>
+            <p>Best Seller</p>
             <p class="price">from P 120</p>
         </div>
         """, unsafe_allow_html=True)
     with f2:
         st.markdown("""
         <div class="product-card">
-            <h4>🌾 Menopause Seed Granola</h4>
-            <p>Hormone supportive seeds</p>
+            <h4>🌾 Menopause Granola</h4>
+            <p>Hormone supportive</p>
             <p class="price">from P 125</p>
         </div>
         """, unsafe_allow_html=True)
     with f3:
         st.markdown("""
         <div class="product-card">
-            <h4>🍵 Healing Tea Variety</h4>
-            <p>Six pure botanical teas</p>
-            <p class="price">from P 280</p>
+            <h4>🥥 Coconut Flour</h4>
+            <p>Sugar & Gluten free</p>
+            <p class="price">from P 85</p>
+        </div>
+        """, unsafe_allow_html=True)
+    with f4:
+        st.markdown("""
+        <div class="product-card">
+            <h4>🍯 Lemon Cinnamon Honey</h4>
+            <p>Immunity & warmth</p>
+            <p class="price">from P 115</p>
         </div>
         """, unsafe_allow_html=True)
 
@@ -367,8 +449,7 @@ elif page == "Payment & Shipping":
     <div class="payment-box">
         <h4>Collection at Athena Gardens</h4>
         <p><strong>Free</strong><br>
-        Athena Gardens, Notwane, Gaborone<br>
-        Please confirm your order on WhatsApp first.</p>
+        Athena Gardens, Notwane, Gaborone</p>
     </div>
     """, unsafe_allow_html=True)
     
@@ -376,14 +457,13 @@ elif page == "Payment & Shipping":
     <div class="payment-box">
         <h4>Delivery within Gaborone</h4>
         <p><strong>P {SHIPPING_FEE}</strong><br>
-        Available only on orders over <strong>P {MIN_ORDER_FOR_SHIPPING}</strong>.<br>
-        We will confirm delivery time on WhatsApp after payment.</p>
+        Available only on orders over <strong>P {MIN_ORDER_FOR_SHIPPING}</strong>.</p>
     </div>
     """, unsafe_allow_html=True)
     
     st.info("After placing your order, please send proof of payment on WhatsApp so we can process it quickly.")
 
-elif page in ["Shop All", "Teas", "Coffee", "Snacks & Cookies", "Honeys & Oils", "Powders", "Bathing Rituals", "Herbs & Spices"]:
+elif page in ["Shop All", "Teas", "Coffee", "Snacks & Cookies", "Flours", "Sweeteners", "Infused Honeys", "Honeys & Oils", "Powders", "Bathing Rituals", "Herbs & Spices"]:
     
     if page == "Shop All":
         filtered = PRODUCTS
@@ -397,6 +477,18 @@ elif page in ["Shop All", "Teas", "Coffee", "Snacks & Cookies", "Honeys & Oils",
     elif page == "Snacks & Cookies":
         filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Snacks & Cookies"}
         st.markdown("## Snacks & Cookies")
+    elif page == "Flours":
+        filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Flours"}
+        st.markdown("## Sugar-Free & Gluten-Free Flours")
+        st.caption("Perfect for keto, banting, diabetic-friendly and hormone-supportive baking")
+    elif page == "Sweeteners":
+        filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Sweeteners"}
+        st.markdown("## Natural Sweeteners")
+        st.caption("Whole-food options and zero-calorie alternatives")
+    elif page == "Infused Honeys":
+        filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Infused Honeys"}
+        st.markdown("## Infused Honeys")
+        st.caption("Raw honey gently infused with healing botanicals")
     elif page == "Honeys & Oils":
         filtered = {k:v for k,v in PRODUCTS.items() if v["category"] in ["Infused Honeys", "Oils"]}
         st.markdown("## Infused Honeys & Oils")
@@ -459,7 +551,6 @@ elif page == "Cart & Order":
     st.markdown("---")
     st.write(f"**Subtotal:** P {subtotal:.2f}")
     
-    # Shipping option
     shipping_choice = st.radio(
         "How would you like to receive your order?",
         ["Collection at Athena Gardens (Free)", f"Delivery within Gaborone (P{SHIPPING_FEE})"],
