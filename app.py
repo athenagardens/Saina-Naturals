@@ -124,7 +124,7 @@ PRODUCTS = {
                        "sizes": [{"label": "Box of 20 sachets", "price": 85}, {"label": "Box of 40 sachets", "price": 155}]},
     "tea_variety": {"name": "Healing Tea Variety Pack", "category": "Teas", "desc": "Ginger, Peppermint, Moringa, Hibiscus, Avocado Leaf & Lemongrass.", "image": "variety.png",
                     "sizes": [{"label": "6 teas (5 sachets each)", "price": 280}, {"label": "6 teas (10 sachets each)", "price": 480}]},
-    "hibiscus_loose": {"name": "Infused Hibiscus Flowers", "category": "Teas", "desc": "Best-seller. Loose hibiscus infused with cloves & cinnamon.", "image": "hibiscus_loose.jpeg",
+    "hibiscus_loose": {"name": "Infused Hibiscus Flowers", "category": "Teas", "desc": "Best-seller. Loose hibiscus infused with cloves & cinnamon.", "image": "hibiscus_loose.png",
                        "sizes": [{"label": "100g", "price": 120}, {"label": "250g", "price": 260}, {"label": "500g", "price": 480}]},
 
     # COFFEE
@@ -153,35 +153,51 @@ PRODUCTS = {
     "coconut_clusters": {"name": "Coconut Seed Clusters", "category": "Snacks & Cookies", "desc": "Crunchy coconut and seed clusters.", "image": "coconut_clusters.png",
                          "sizes": [{"label": "200g", "price": 90}, {"label": "400g", "price": 165}]},
 
-    # FLOURS
+    # POWDERS & FLOURS
     "flour_almond": {
         "name": "Almond Flour",
-        "category": "Flours",
+        "category": "Powders & Flours",
         "desc": "Finely milled almonds. Perfect for keto cookies, cakes, pancakes and coatings. Sugar-free & gluten-free.",
         "image": "almond_flour.png",
         "sizes": [{"label": "250g", "price": 95}, {"label": "500g", "price": 175}]
     },
     "flour_coconut": {
         "name": "Coconut Flour",
-        "category": "Flours",
+        "category": "Powders & Flours",
         "desc": "High-fibre, low-carb coconut flour. Excellent for pancakes, muffins, energy balls and thickening. Sugar-free & gluten-free.",
         "image": "coconut_flour.png",
         "sizes": [{"label": "250g", "price": 85}, {"label": "500g", "price": 155}]
     },
     "flour_flax": {
         "name": "Flaxseed Flour",
-        "category": "Flours",
+        "category": "Powders & Flours",
         "desc": "Freshly milled flaxseed. Ideal for baking, smoothies, hormone support and as a binding agent. Sugar-free & gluten-free.",
         "image": "flax_flour.png",
         "sizes": [{"label": "250g", "price": 90}, {"label": "500g", "price": 165}]
     },
     "flour_pumpkin": {
         "name": "Pumpkin Seed Flour",
-        "category": "Flours",
+        "category": "Powders & Flours",
         "desc": "Zinc-rich pumpkin seed flour. Great for savoury baking, protein boost and hormone balance. Sugar-free & gluten-free.",
         "image": "pumpkin_flour.png",
         "sizes": [{"label": "250g", "price": 95}, {"label": "500g", "price": 175}]
     },
+    "powder_moringa": {"name": "Moringa Powder", "category": "Powders & Flours", "desc": "Pure moringa leaf powder. Nutrient dense.", "image": "moringa_powder.png",
+                       "sizes": [{"label": "100g", "price": 95}, {"label": "250g", "price": 210}]},
+    "powder_baobab": {"name": "Baobab Powder", "category": "Powders & Flours", "desc": "Vitamin C rich African superfruit powder.", "image": "baobab.png",
+                      "sizes": [{"label": "100g", "price": 110}, {"label": "250g", "price": 240}]},
+    "powder_turmeric": {"name": "Turmeric Powder", "category": "Powders & Flours", "desc": "Pure turmeric root powder.", "image": "turmeric.png",
+                        "sizes": [{"label": "100g", "price": 75}, {"label": "250g", "price": 160}]},
+    "powder_flax": {"name": "Flaxseed Powder", "category": "Powders & Flours", "desc": "Freshly milled flaxseed. Excellent for hormones and menopause support.", "image": "flax.png",
+                    "sizes": [{"label": "200g", "price": 85}, {"label": "400g", "price": 155}]},
+    "powder_pumpkin": {"name": "Pumpkin Seed Powder", "category": "Powders & Flours", "desc": "Rich in zinc and magnesium. Great for hormone balance.", "image": "pumpkin_powder.png",
+                       "sizes": [{"label": "200g", "price": 95}, {"label": "400g", "price": 175}]},
+    "powder_maca": {"name": "Maca Powder", "category": "Powders & Flours", "desc": "Traditional hormone-supportive root.", "image": "maca.png",
+                    "sizes": [{"label": "100g", "price": 120}, {"label": "250g", "price": 260}]},
+    "powder_beetroot": {"name": "Beetroot Powder", "category": "Powders & Flours", "desc": "Natural energy and circulation support.", "image": "beetroot.png",
+                        "sizes": [{"label": "100g", "price": 90}, {"label": "250g", "price": 195}]},
+    "powder_spirulina": {"name": "Spirulina Powder", "category": "Powders & Flours", "desc": "Nutrient-dense blue-green algae.", "image": "spirulina.png",
+                         "sizes": [{"label": "100g", "price": 130}, {"label": "250g", "price": 280}]},
 
     # SWEETENERS
     "sweetener_honey": {
@@ -217,7 +233,7 @@ PRODUCTS = {
     "honey_ginger": {
         "name": "Ginger Infused Honey",
         "category": "Infused Honeys",
-        "desc": "Raw honey gently infused with fresh ginger. Supports digestion, soothes the stomach, and provides natural warmth. Ideal for tea or taken by the spoon.",
+        "desc": "Raw honey gently infused with fresh ginger. Supports digestion, soothes the stomach, and provides natural warmth.",
         "image": "honey_ginger.png",
         "sizes": [{"label": "250g", "price": 110}, {"label": "500g", "price": 200}]
     },
@@ -231,28 +247,10 @@ PRODUCTS = {
     "honey_lemon_cinnamon": {
         "name": "Lemon & Cinnamon Infused Honey",
         "category": "Infused Honeys",
-        "desc": "Raw honey infused with lemon and cinnamon. Supports immunity, aids digestion, and offers a bright, warming flavour. Excellent in tea or as a daily tonic.",
+        "desc": "Raw honey infused with lemon and cinnamon. Supports immunity, aids digestion, and offers a bright, warming flavour.",
         "image": "honey_lemon_cinnamon.png",
         "sizes": [{"label": "250g", "price": 115}, {"label": "500g", "price": 210}]
     },
-
-    # POWDERS
-    "powder_moringa": {"name": "Moringa Powder", "category": "Powders", "desc": "Pure moringa leaf powder. Nutrient dense.", "image": "moringa_powder.png",
-                       "sizes": [{"label": "100g", "price": 95}, {"label": "250g", "price": 210}]},
-    "powder_baobab": {"name": "Baobab Powder", "category": "Powders", "desc": "Vitamin C rich African superfruit powder.", "image": "baobab.png",
-                      "sizes": [{"label": "100g", "price": 110}, {"label": "250g", "price": 240}]},
-    "powder_turmeric": {"name": "Turmeric Powder", "category": "Powders", "desc": "Pure turmeric root powder.", "image": "turmeric.png",
-                        "sizes": [{"label": "100g", "price": 75}, {"label": "250g", "price": 160}]},
-    "powder_flax": {"name": "Flaxseed Powder", "category": "Powders", "desc": "Freshly milled flaxseed. Excellent for hormones and menopause support.", "image": "flax.png",
-                    "sizes": [{"label": "200g", "price": 85}, {"label": "400g", "price": 155}]},
-    "powder_pumpkin": {"name": "Pumpkin Seed Powder", "category": "Powders", "desc": "Rich in zinc and magnesium. Great for hormone balance.", "image": "pumpkin_powder.png",
-                       "sizes": [{"label": "200g", "price": 95}, {"label": "400g", "price": 175}]},
-    "powder_maca": {"name": "Maca Powder", "category": "Powders", "desc": "Traditional hormone-supportive root.", "image": "maca.png",
-                    "sizes": [{"label": "100g", "price": 120}, {"label": "250g", "price": 260}]},
-    "powder_beetroot": {"name": "Beetroot Powder", "category": "Powders", "desc": "Natural energy and circulation support.", "image": "beetroot.png",
-                        "sizes": [{"label": "100g", "price": 90}, {"label": "250g", "price": 195}]},
-    "powder_spirulina": {"name": "Spirulina Powder", "category": "Powders", "desc": "Nutrient-dense blue-green algae.", "image": "spirulina.png",
-                         "sizes": [{"label": "100g", "price": 130}, {"label": "250g", "price": 280}]},
 
     # OILS
     "oil_olive": {"name": "Extra Virgin Olive Oil", "category": "Oils", "desc": "Premium cold-pressed olive oil.", "image": "olive_oil.png",
@@ -310,7 +308,10 @@ def get_cart_count():
 with st.sidebar:
     logo_path = "assets/saina_logo.png"
     if os.path.exists(logo_path):
-        st.image(logo_path, use_container_width=True)
+        try:
+            st.image(logo_path, use_container_width=True)
+        except:
+            st.markdown("### 🌿 Saina Naturals")
     else:
         st.markdown("### 🌿 Saina Naturals")
     
@@ -320,7 +321,7 @@ with st.sidebar:
     
     page = st.radio(
         "Menu",
-        ["Home", "Shop All", "Teas", "Coffee", "Snacks & Cookies", "Flours", "Sweeteners", "Infused Honeys", "Honeys & Oils", "Powders", "Bathing Rituals", "Herbs & Spices", "Payment & Shipping", "Cart & Order"],
+        ["Home", "Shop All", "Teas", "Coffee", "Snacks & Cookies", "Powders & Flours", "Sweeteners", "Infused Honeys", "Oils", "Bathing Rituals", "Herbs & Spices", "Payment & Shipping", "Cart & Order"],
         label_visibility="collapsed"
     )
     
@@ -335,16 +336,24 @@ with st.sidebar:
     else:
         st.info("Cart is empty")
 
-# ==================== PRODUCT DISPLAY ====================
+# ==================== SAFE PRODUCT DISPLAY ====================
 def show_product(pid, p):
     img_path = f"assets/{p.get('image', '')}"
     
     col_img, col_info = st.columns([1, 2.2])
     
     with col_img:
-        if os.path.exists(img_path):
-            st.image(img_path, use_container_width=True)
-        else:
+        try:
+            if os.path.exists(img_path) and os.path.getsize(img_path) > 100:
+                st.image(img_path, use_container_width=True)
+            else:
+                st.markdown(f"""
+                <div style="background:#EDE6DC; height:130px; border-radius:10px; 
+                display:flex; align-items:center; justify-content:center; color:#999; font-size:0.9rem;">
+                    Saina Naturals
+                </div>
+                """, unsafe_allow_html=True)
+        except Exception:
             st.markdown(f"""
             <div style="background:#EDE6DC; height:130px; border-radius:10px; 
             display:flex; align-items:center; justify-content:center; color:#999; font-size:0.9rem;">
@@ -369,9 +378,12 @@ def show_product(pid, p):
 if page == "Home":
     st.markdown('<div style="text-align:center; padding: 1rem 0;">', unsafe_allow_html=True)
     if os.path.exists("assets/saina_logo.png"):
-        c1, c2, c3 = st.columns([1, 1.2, 1])
-        with c2:
-            st.image("assets/saina_logo.png", use_container_width=True)
+        try:
+            c1, c2, c3 = st.columns([1, 1.2, 1])
+            with c2:
+                st.image("assets/saina_logo.png", use_container_width=True)
+        except:
+            pass
     st.markdown("# Saina Naturals")
     st.markdown('<p class="tagline">Clean. Healing. Naturally Nourishing.</p>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
@@ -463,7 +475,7 @@ elif page == "Payment & Shipping":
     
     st.info("After placing your order, please send proof of payment on WhatsApp so we can process it quickly.")
 
-elif page in ["Shop All", "Teas", "Coffee", "Snacks & Cookies", "Flours", "Sweeteners", "Infused Honeys", "Honeys & Oils", "Powders", "Bathing Rituals", "Herbs & Spices"]:
+elif page in ["Shop All", "Teas", "Coffee", "Snacks & Cookies", "Powders & Flours", "Sweeteners", "Infused Honeys", "Oils", "Bathing Rituals", "Herbs & Spices"]:
     
     if page == "Shop All":
         filtered = PRODUCTS
@@ -477,10 +489,10 @@ elif page in ["Shop All", "Teas", "Coffee", "Snacks & Cookies", "Flours", "Sweet
     elif page == "Snacks & Cookies":
         filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Snacks & Cookies"}
         st.markdown("## Snacks & Cookies")
-    elif page == "Flours":
-        filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Flours"}
-        st.markdown("## Sugar-Free & Gluten-Free Flours")
-        st.caption("Perfect for keto, banting, diabetic-friendly and hormone-supportive baking")
+    elif page == "Powders & Flours":
+        filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Powders & Flours"}
+        st.markdown("## Powders & Flours")
+        st.caption("Sugar-free, gluten-free flours and nutrient-dense powders")
     elif page == "Sweeteners":
         filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Sweeteners"}
         st.markdown("## Natural Sweeteners")
@@ -489,12 +501,9 @@ elif page in ["Shop All", "Teas", "Coffee", "Snacks & Cookies", "Flours", "Sweet
         filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Infused Honeys"}
         st.markdown("## Infused Honeys")
         st.caption("Raw honey gently infused with healing botanicals")
-    elif page == "Honeys & Oils":
-        filtered = {k:v for k,v in PRODUCTS.items() if v["category"] in ["Infused Honeys", "Oils"]}
-        st.markdown("## Infused Honeys & Oils")
-    elif page == "Powders":
-        filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Powders"}
-        st.markdown("## Powders")
+    elif page == "Oils":
+        filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Oils"}
+        st.markdown("## Oils")
     elif page == "Bathing Rituals":
         filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Bathing Rituals"}
         st.markdown("## Bathing & Ritual Teas")
