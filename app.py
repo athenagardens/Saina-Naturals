@@ -124,7 +124,7 @@ PRODUCTS = {
                        "sizes": [{"label": "Box of 20 sachets", "price": 85}, {"label": "Box of 40 sachets", "price": 155}]},
     "tea_variety": {"name": "Healing Tea Variety Pack", "category": "Teas", "desc": "Ginger, Peppermint, Moringa, Hibiscus, Avocado Leaf & Lemongrass.", "image": "variety.png",
                     "sizes": [{"label": "6 teas (5 sachets each)", "price": 280}, {"label": "6 teas (10 sachets each)", "price": 480}]},
-    "hibiscus_loose": {"name": "Infused Hibiscus Flowers", "category": "Teas", "desc": "Best-seller. Loose hibiscus infused with cloves & cinnamon.", "image": "hibiscus_loose.png",
+    "hibiscus_loose": {"name": "Infused Hibiscus Flowers", "category": "Teas", "desc": "Best-seller. Loose hibiscus infused with cloves & cinnamon.", "image": "hibiscus_loose.jpeg",
                        "sizes": [{"label": "100g", "price": 120}, {"label": "250g", "price": 260}, {"label": "500g", "price": 480}]},
 
     # COFFEE
