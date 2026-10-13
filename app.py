@@ -93,7 +93,6 @@ div[data-testid="stSidebar"] {{
     margin-bottom: 1rem;
 }}
 
-/* Equal height featured cards */
 .featured-card {{
     background: white;
     border-radius: 14px;
@@ -163,8 +162,8 @@ PRODUCTS = {
     # SNACKS & COOKIES
     "cookies_almond": {"name": "Almond Seed Cookies", "category": "Snacks & Cookies", "desc": "No sugar. No flour. High protein. Perfect for keto, banting & diabetics.", "image": "cookies.png",
                        "sizes": [{"label": "Pack of 8", "price": 95}, {"label": "Pack of 16", "price": 175}]},
-    "granola_coconut": {"name": "Coconut Nut Granola", "category": "Snacks & Cookies", "desc": "Low-carb clusters of coconut, nuts & seeds. No grains.", "image": "granola.png",
-                        "sizes": [{"label": "300g", "price": 110}, {"label": "600g", "price": 200}]},
+    "cookies_coconut": {"name": "Coconut Cookies", "category": "Snacks & Cookies", "desc": "Soft and chewy coconut cookies. Sugar-free, gluten-free and perfect for keto lifestyles.", "image": "coconut_cookies.png",
+                        "sizes": [{"label": "Pack of 8", "price": 95}, {"label": "Pack of 16", "price": 175}]},
     "granola_menopause": {"name": "Menopause Seed Granola", "category": "Snacks & Cookies", "desc": "Hormone-supportive blend of flax, pumpkin, sesame, sunflower & chia seeds.", "image": "menopause_granola.png",
                           "sizes": [{"label": "300g", "price": 125}, {"label": "600g", "price": 230}]},
     "butter_almond": {"name": "Almond Butter", "category": "Snacks & Cookies", "desc": "100% pure almonds. Nothing added.", "image": "almond_butter.png",
@@ -173,10 +172,6 @@ PRODUCTS = {
                       "sizes": [{"label": "250g", "price": 120}, {"label": "350g", "price": 155}]},
     "butter_mixed": {"name": "Mixed Nut Butter", "category": "Snacks & Cookies", "desc": "Powerful blend of almonds, cashews, walnuts & seeds.", "image": "mixed_butter.png",
                      "sizes": [{"label": "250g", "price": 125}, {"label": "350g", "price": 160}]},
-    "nuts_mixed": {"name": "Mixed Nuts & Seeds", "category": "Snacks & Cookies", "desc": "Raw or lightly seasoned with Himalayan salt.", "image": "nuts.png",
-                   "sizes": [{"label": "250g", "price": 95}, {"label": "500g", "price": 175}]},
-    "nuts_trio": {"name": "Trio Nut Mix", "category": "Snacks & Cookies", "desc": "Almonds, cashews & peanuts with Himalayan salt.", "image": "trio_nuts.png",
-                  "sizes": [{"label": "300g", "price": 105}, {"label": "600g", "price": 190}]},
     "seed_crackers": {"name": "Seed Crackers", "category": "Snacks & Cookies", "desc": "Crispy flax, pumpkin and sesame seed crackers. Zero flour, keto-friendly.", "image": "seed_crackers.png",
                       "sizes": [{"label": "Pack of 12", "price": 85}, {"label": "Pack of 24", "price": 155}]},
     "coconut_clusters": {"name": "Coconut Seed Clusters", "category": "Snacks & Cookies", "desc": "Crunchy coconut and seed clusters.", "image": "coconut_clusters.png",
