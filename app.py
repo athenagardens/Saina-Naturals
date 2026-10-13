@@ -159,53 +159,33 @@ PRODUCTS = {
     "coffee_kilimanjaro": {"name": "Kilimanjaro Arabica", "category": "Coffee", "desc": "Pure Arabica beans. Clean energy, carefully sourced.", "image": "coffee.png",
                            "sizes": [{"label": "250g whole beans", "price": 95}, {"label": "500g whole beans", "price": 180}, {"label": "1kg whole beans", "price": 340}]},
 
-    # SNACKS & COOKIES
+    # SNACKS & COOKIES (Cookies → Crackers → Butters)
     "cookies_almond": {"name": "Almond Seed Cookies", "category": "Snacks & Cookies", "desc": "No sugar. No flour. High protein. Perfect for keto, banting & diabetics.", "image": "cookies.png",
                        "sizes": [{"label": "Pack of 8", "price": 95}, {"label": "Pack of 16", "price": 175}]},
     "cookies_coconut": {"name": "Coconut Cookies", "category": "Snacks & Cookies", "desc": "Soft and chewy coconut cookies. Sugar-free, gluten-free and perfect for keto lifestyles.", "image": "coconut_cookies.png",
                         "sizes": [{"label": "Pack of 8", "price": 95}, {"label": "Pack of 16", "price": 175}]},
     "granola_menopause": {"name": "Menopause Seed Granola", "category": "Snacks & Cookies", "desc": "Hormone-supportive blend of flax, pumpkin, sesame, sunflower & chia seeds.", "image": "menopause_granola.png",
                           "sizes": [{"label": "300g", "price": 125}, {"label": "600g", "price": 230}]},
+    "seed_crackers": {"name": "Seed Crackers", "category": "Snacks & Cookies", "desc": "Crispy flax, pumpkin and sesame seed crackers. Zero flour, keto-friendly.", "image": "seed_crackers.png",
+                      "sizes": [{"label": "Pack of 12", "price": 85}, {"label": "Pack of 24", "price": 155}]},
+    "coconut_clusters": {"name": "Coconut Seed Clusters", "category": "Snacks & Cookies", "desc": "Crunchy coconut and seed clusters.", "image": "coconut_clusters.png",
+                         "sizes": [{"label": "200g", "price": 90}, {"label": "400g", "price": 165}]},
     "butter_almond": {"name": "Almond Butter", "category": "Snacks & Cookies", "desc": "100% pure almonds. Nothing added.", "image": "almond_butter.png",
                       "sizes": [{"label": "250g", "price": 110}, {"label": "350g", "price": 145}, {"label": "500g", "price": 195}]},
     "butter_cashew": {"name": "Cashew Butter", "category": "Snacks & Cookies", "desc": "Smooth, pure cashew butter.", "image": "cashew_butter.png",
                       "sizes": [{"label": "250g", "price": 120}, {"label": "350g", "price": 155}]},
     "butter_mixed": {"name": "Mixed Nut Butter", "category": "Snacks & Cookies", "desc": "Powerful blend of almonds, cashews, walnuts & seeds.", "image": "mixed_butter.png",
                      "sizes": [{"label": "250g", "price": 125}, {"label": "350g", "price": 160}]},
-    "seed_crackers": {"name": "Seed Crackers", "category": "Snacks & Cookies", "desc": "Crispy flax, pumpkin and sesame seed crackers. Zero flour, keto-friendly.", "image": "seed_crackers.png",
-                      "sizes": [{"label": "Pack of 12", "price": 85}, {"label": "Pack of 24", "price": 155}]},
-    "coconut_clusters": {"name": "Coconut Seed Clusters", "category": "Snacks & Cookies", "desc": "Crunchy coconut and seed clusters.", "image": "coconut_clusters.png",
-                         "sizes": [{"label": "200g", "price": 90}, {"label": "400g", "price": 165}]},
 
     # POWDERS & FLOURS
-    "flour_almond": {
-        "name": "Almond Flour",
-        "category": "Powders & Flours",
-        "desc": "Finely milled almonds. Perfect for keto cookies, cakes, pancakes and coatings. Sugar-free & gluten-free.",
-        "image": "almond_flour.png",
-        "sizes": [{"label": "250g", "price": 95}, {"label": "500g", "price": 175}]
-    },
-    "flour_coconut": {
-        "name": "Coconut Flour",
-        "category": "Powders & Flours",
-        "desc": "High-fibre, low-carb coconut flour. Excellent for pancakes, muffins, energy balls and thickening. Sugar-free & gluten-free.",
-        "image": "coconut_flour.png",
-        "sizes": [{"label": "250g", "price": 85}, {"label": "500g", "price": 155}]
-    },
-    "flour_flax": {
-        "name": "Flaxseed Flour",
-        "category": "Powders & Flours",
-        "desc": "Freshly milled flaxseed. Ideal for baking, smoothies, hormone support and as a binding agent. Sugar-free & gluten-free.",
-        "image": "flax_flour.png",
-        "sizes": [{"label": "250g", "price": 90}, {"label": "500g", "price": 165}]
-    },
-    "flour_pumpkin": {
-        "name": "Pumpkin Seed Flour",
-        "category": "Powders & Flours",
-        "desc": "Zinc-rich pumpkin seed flour. Great for savoury baking, protein boost and hormone balance. Sugar-free & gluten-free.",
-        "image": "pumpkin_flour.png",
-        "sizes": [{"label": "250g", "price": 95}, {"label": "500g", "price": 175}]
-    },
+    "flour_almond": {"name": "Almond Flour", "category": "Powders & Flours", "desc": "Finely milled almonds. Perfect for keto cookies, cakes, pancakes and coatings. Sugar-free & gluten-free.", "image": "almond_flour.png",
+                     "sizes": [{"label": "250g", "price": 95}, {"label": "500g", "price": 175}]},
+    "flour_coconut": {"name": "Coconut Flour", "category": "Powders & Flours", "desc": "High-fibre, low-carb coconut flour. Excellent for pancakes, muffins, energy balls and thickening. Sugar-free & gluten-free.", "image": "coconut_flour.png",
+                      "sizes": [{"label": "250g", "price": 85}, {"label": "500g", "price": 155}]},
+    "flour_flax": {"name": "Flaxseed Flour", "category": "Powders & Flours", "desc": "Freshly milled flaxseed. Ideal for baking, smoothies, hormone support and as a binding agent. Sugar-free & gluten-free.", "image": "flax_flour.png",
+                   "sizes": [{"label": "250g", "price": 90}, {"label": "500g", "price": 165}]},
+    "flour_pumpkin": {"name": "Pumpkin Seed Flour", "category": "Powders & Flours", "desc": "Zinc-rich pumpkin seed flour. Great for savoury baking, protein boost and hormone balance. Sugar-free & gluten-free.", "image": "pumpkin_flour.png",
+                      "sizes": [{"label": "250g", "price": 95}, {"label": "500g", "price": 175}]},
     "powder_moringa": {"name": "Moringa Powder", "category": "Powders & Flours", "desc": "Pure moringa leaf powder. Nutrient dense.", "image": "moringa_powder.png",
                        "sizes": [{"label": "100g", "price": 95}, {"label": "250g", "price": 210}]},
     "powder_baobab": {"name": "Baobab Powder", "category": "Powders & Flours", "desc": "Vitamin C rich African superfruit powder.", "image": "baobab.png",
@@ -224,63 +204,44 @@ PRODUCTS = {
                          "sizes": [{"label": "100g", "price": 130}, {"label": "250g", "price": 280}]},
 
     # SWEETENERS
-    "sweetener_honey": {
-        "name": "Raw Honey",
-        "category": "Sweeteners",
-        "desc": "Pure raw honey. A whole-food natural sweetener. Contains natural sugars – not sugar-free. Perfect for tea, baking and everyday use.",
-        "image": "honey_raw.png",
-        "sizes": [{"label": "250g", "price": 95}, {"label": "500g", "price": 175}]
-    },
-    "sweetener_date": {
-        "name": "Date Syrup",
-        "category": "Sweeteners",
-        "desc": "100% pure date syrup. A whole-food natural sweetener made from dates. Contains natural sugars – not sugar-free. Rich caramel flavour, ideal for baking and porridge.",
-        "image": "date_syrup.png",
-        "sizes": [{"label": "250g", "price": 110}, {"label": "500g", "price": 200}]
-    },
-    "sweetener_monk": {
-        "name": "Monk Fruit Sweetener",
-        "category": "Sweeteners",
-        "desc": "Zero-calorie, sugar-free natural sweetener. Ideal for keto, diabetic and blood-sugar friendly lifestyles.",
-        "image": "monk_fruit.png",
-        "sizes": [{"label": "100g", "price": 145}, {"label": "250g", "price": 295}]
-    },
-    "sweetener_stevia": {
-        "name": "Stevia Leaf Powder",
-        "category": "Sweeteners",
-        "desc": "Pure stevia leaf powder. Zero-calorie and sugar-free. Very concentrated – a little goes a long way.",
-        "image": "stevia.png",
-        "sizes": [{"label": "50g", "price": 95}, {"label": "100g", "price": 175}]
-    },
+    "sweetener_honey": {"name": "Raw Honey", "category": "Sweeteners", "desc": "Pure raw honey. A whole-food natural sweetener. Contains natural sugars – not sugar-free.", "image": "honey_raw.png",
+                        "sizes": [{"label": "250g", "price": 95}, {"label": "500g", "price": 175}]},
+    "sweetener_date": {"name": "Date Syrup", "category": "Sweeteners", "desc": "100% pure date syrup. A whole-food natural sweetener. Contains natural sugars – not sugar-free.", "image": "date_syrup.png",
+                       "sizes": [{"label": "250g", "price": 110}, {"label": "500g", "price": 200}]},
+    "sweetener_monk": {"name": "Monk Fruit Sweetener", "category": "Sweeteners", "desc": "Zero-calorie, sugar-free natural sweetener. Ideal for keto and diabetic lifestyles.", "image": "monk_fruit.png",
+                       "sizes": [{"label": "100g", "price": 145}, {"label": "250g", "price": 295}]},
+    "sweetener_stevia": {"name": "Stevia Leaf Powder", "category": "Sweeteners", "desc": "Pure stevia leaf powder. Zero-calorie and sugar-free.", "image": "stevia.png",
+                         "sizes": [{"label": "50g", "price": 95}, {"label": "100g", "price": 175}]},
 
     # INFUSED HONEYS
-    "honey_ginger": {
-        "name": "Ginger Infused Honey",
-        "category": "Infused Honeys",
-        "desc": "Raw honey gently infused with fresh ginger. Supports digestion, soothes the stomach, and provides natural warmth.",
-        "image": "honey_ginger.png",
-        "sizes": [{"label": "250g", "price": 110}, {"label": "500g", "price": 200}]
-    },
-    "honey_turmeric": {
-        "name": "Turmeric Infused Honey",
-        "category": "Infused Honeys",
-        "desc": "Raw honey infused with turmeric. Traditionally used to support immunity, reduce inflammation, and promote overall wellness.",
-        "image": "honey_turmeric.png",
-        "sizes": [{"label": "250g", "price": 120}, {"label": "500g", "price": 220}]
-    },
-    "honey_lemon_cinnamon": {
-        "name": "Lemon & Cinnamon Infused Honey",
-        "category": "Infused Honeys",
-        "desc": "Raw honey infused with lemon and cinnamon. Supports immunity, aids digestion, and offers a bright, warming flavour.",
-        "image": "honey_lemon_cinnamon.png",
-        "sizes": [{"label": "250g", "price": 115}, {"label": "500g", "price": 210}]
-    },
+    "honey_ginger": {"name": "Ginger Infused Honey", "category": "Infused Honeys", "desc": "Raw honey gently infused with fresh ginger. Supports digestion and provides natural warmth.", "image": "honey_ginger.png",
+                     "sizes": [{"label": "250g", "price": 110}, {"label": "500g", "price": 200}]},
+    "honey_turmeric": {"name": "Turmeric Infused Honey", "category": "Infused Honeys", "desc": "Raw honey infused with turmeric. Supports immunity and reduces inflammation.", "image": "honey_turmeric.png",
+                       "sizes": [{"label": "250g", "price": 120}, {"label": "500g", "price": 220}]},
+    "honey_lemon_cinnamon": {"name": "Lemon & Cinnamon Infused Honey", "category": "Infused Honeys", "desc": "Raw honey infused with lemon and cinnamon. Supports immunity and aids digestion.", "image": "honey_lemon_cinnamon.png",
+                             "sizes": [{"label": "250g", "price": 115}, {"label": "500g", "price": 210}]},
 
-    # OILS
-    "oil_olive": {"name": "Extra Virgin Olive Oil", "category": "Oils", "desc": "Premium cold-pressed olive oil.", "image": "olive_oil.png",
-                  "sizes": [{"label": "250ml", "price": 95}, {"label": "500ml", "price": 165}]},
-    "oil_coconut": {"name": "Virgin Coconut Oil", "category": "Oils", "desc": "Cold-pressed virgin coconut oil.", "image": "coconut_oil.png",
+    # NATURAL OILS
+    "oil_coconut": {"name": "Virgin Coconut Oil", "category": "Natural Oils", "desc": "Cold-pressed virgin coconut oil. Great for cooking and skin.", "image": "coconut_oil.png",
                     "sizes": [{"label": "250ml", "price": 55}, {"label": "500ml", "price": 95}]},
+    "oil_olive": {"name": "Extra Virgin Olive Oil", "category": "Natural Oils", "desc": "Premium cold-pressed olive oil.", "image": "olive_oil.png",
+                  "sizes": [{"label": "250ml", "price": 95}, {"label": "500ml", "price": 165}]},
+    "oil_avocado": {"name": "Avocado Oil", "category": "Natural Oils", "desc": "Pure cold-pressed avocado oil. High smoke point and rich in nutrients.", "image": "avocado_oil.png",
+                    "sizes": [{"label": "250ml", "price": 110}, {"label": "500ml", "price": 195}]},
+
+    # ESSENTIAL OILS
+    "eo_headache": {"name": "Headache Relief Blend", "category": "Essential Oils", "desc": "Natural essential oil blend to ease tension and headaches.", "image": "eo_headache.png",
+                    "sizes": [{"label": "10ml", "price": 95}, {"label": "30ml", "price": 220}]},
+    "eo_joint": {"name": "Joint Pain Relief Blend", "category": "Essential Oils", "desc": "Soothing blend formulated to support joint comfort and mobility.", "image": "eo_joint.png",
+                 "sizes": [{"label": "10ml", "price": 95}, {"label": "30ml", "price": 220}]},
+    "eo_stress": {"name": "Stress & Insomnia Blend", "category": "Essential Oils", "desc": "Calming blend to help reduce stress and support restful sleep.", "image": "eo_stress.png",
+                  "sizes": [{"label": "10ml", "price": 95}, {"label": "30ml", "price": 220}]},
+    "eo_menopause": {"name": "Menopause Support Blend", "category": "Essential Oils", "desc": "Balancing blend to support women during menopause.", "image": "eo_menopause.png",
+                     "sizes": [{"label": "10ml", "price": 105}, {"label": "30ml", "price": 240}]},
+    "eo_prostate": {"name": "Prostate Health Blend", "category": "Essential Oils", "desc": "Supportive blend formulated for prostate wellness.", "image": "eo_prostate.png",
+                    "sizes": [{"label": "10ml", "price": 105}, {"label": "30ml", "price": 240}]},
+    "eo_flu": {"name": "Flu Relief Blend", "category": "Essential Oils", "desc": "Immune-supporting blend to help ease cold and flu symptoms.", "image": "eo_flu.png",
+               "sizes": [{"label": "10ml", "price": 95}, {"label": "30ml", "price": 220}]},
 
     # BATHING
     "bath_lavender": {"name": "Lavender Bathing Tea", "category": "Bathing Rituals", "desc": "Calming floral soak for evening rituals.", "image": "lavender.png",
@@ -345,7 +306,7 @@ with st.sidebar:
     
     page = st.radio(
         "Menu",
-        ["Home", "Shop All", "Teas", "Coffee", "Snacks & Cookies", "Powders & Flours", "Sweeteners", "Infused Honeys", "Oils", "Bathing Rituals", "Herbs & Spices", "Payment & Shipping", "Cart & Order"],
+        ["Home", "Shop All", "Teas", "Coffee", "Snacks & Cookies", "Powders & Flours", "Sweeteners", "Infused Honeys", "Natural Oils", "Essential Oils", "Bathing Rituals", "Herbs & Spices", "Payment & Shipping", "Cart & Order"],
         label_visibility="collapsed"
     )
     
@@ -416,7 +377,7 @@ if page == "Home":
     st.markdown("### Healing foods & botanicals for modern Botswana")
     st.write(
         "Keto-friendly • Diabetic-conscious • Hormone supportive • Sugar-free & Gluten-free options available. "
-        "From our best-selling infused hibiscus and menopause seed granola to pure teas, flours, natural sweeteners and clean snacks."
+        "From our best-selling infused hibiscus and menopause seed granola to pure teas, flours, natural oils and essential oil blends."
     )
     st.write("**Located at Athena Gardens, Notwane, Gaborone**")
     
@@ -512,7 +473,7 @@ elif page == "Payment & Shipping":
     
     st.info("After placing your order, please send proof of payment on WhatsApp so we can process it quickly.")
 
-elif page in ["Shop All", "Teas", "Coffee", "Snacks & Cookies", "Powders & Flours", "Sweeteners", "Infused Honeys", "Oils", "Bathing Rituals", "Herbs & Spices"]:
+elif page in ["Shop All", "Teas", "Coffee", "Snacks & Cookies", "Powders & Flours", "Sweeteners", "Infused Honeys", "Natural Oils", "Essential Oils", "Bathing Rituals", "Herbs & Spices"]:
     
     if page == "Shop All":
         filtered = PRODUCTS
@@ -526,6 +487,7 @@ elif page in ["Shop All", "Teas", "Coffee", "Snacks & Cookies", "Powders & Flour
     elif page == "Snacks & Cookies":
         filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Snacks & Cookies"}
         st.markdown("## Snacks & Cookies")
+        st.caption("Cookies → Crackers → Nut Butters")
     elif page == "Powders & Flours":
         filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Powders & Flours"}
         st.markdown("## Powders & Flours")
@@ -533,14 +495,17 @@ elif page in ["Shop All", "Teas", "Coffee", "Snacks & Cookies", "Powders & Flour
     elif page == "Sweeteners":
         filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Sweeteners"}
         st.markdown("## Natural Sweeteners")
-        st.caption("Whole-food options and zero-calorie alternatives")
     elif page == "Infused Honeys":
         filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Infused Honeys"}
         st.markdown("## Infused Honeys")
-        st.caption("Raw honey gently infused with healing botanicals")
-    elif page == "Oils":
-        filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Oils"}
-        st.markdown("## Oils")
+    elif page == "Natural Oils":
+        filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Natural Oils"}
+        st.markdown("## Natural Oils")
+        st.caption("Coconut • Olive • Avocado")
+    elif page == "Essential Oils":
+        filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Essential Oils"}
+        st.markdown("## Essential Oil Blends")
+        st.caption("Therapeutic blends for everyday wellness")
     elif page == "Bathing Rituals":
         filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Bathing Rituals"}
         st.markdown("## Bathing & Ritual Teas")
