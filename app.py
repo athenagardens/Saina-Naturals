@@ -159,7 +159,7 @@ PRODUCTS = {
     "coffee_kilimanjaro": {"name": "Kilimanjaro Arabica", "category": "Coffee", "desc": "Pure Arabica beans. Clean energy, carefully sourced.", "image": "coffee.png",
                            "sizes": [{"label": "250g whole beans", "price": 95}, {"label": "500g whole beans", "price": 180}, {"label": "1kg whole beans", "price": 340}]},
 
-    # SNACKS & COOKIES (Cookies → Crackers → Butters)
+    # SNACKS & COOKIES
     "cookies_almond": {"name": "Almond Seed Cookies", "category": "Snacks & Cookies", "desc": "No sugar. No flour. High protein. Perfect for keto, banting & diabetics.", "image": "cookies.png",
                        "sizes": [{"label": "Pack of 8", "price": 95}, {"label": "Pack of 16", "price": 175}]},
     "cookies_coconut": {"name": "Coconut Cookies", "category": "Snacks & Cookies", "desc": "Soft and chewy coconut cookies. Sugar-free, gluten-free and perfect for keto lifestyles.", "image": "coconut_cookies.png",
@@ -294,7 +294,10 @@ with st.sidebar:
     logo_path = "assets/saina_logo.png"
     if os.path.exists(logo_path):
         try:
-            st.image(logo_path, use_container_width=True)
+            # Smaller logo
+            col1, col2, col3 = st.columns([1, 2, 1])
+            with col2:
+                st.image(logo_path, use_container_width=True)
         except:
             st.markdown("### 🌿 Saina Naturals")
     else:
@@ -306,7 +309,20 @@ with st.sidebar:
     
     page = st.radio(
         "Menu",
-        ["Home", "Shop All", "Teas", "Coffee", "Snacks & Cookies", "Powders & Flours", "Sweeteners", "Infused Honeys", "Natural Oils", "Essential Oils", "Bathing Rituals", "Herbs & Spices", "Payment & Shipping", "Cart & Order"],
+        [
+            "Home",
+            "Shop All",
+            "Teas & Coffee",
+            "Snacks & Cookies",
+            "Powders & Flours",
+            "Sweeteners & Honeys",
+            "Natural Oils",
+            "Essential Oils",
+            "Bathing Rituals",
+            "Herbs & Spices",
+            "Payment & Shipping",
+            "Cart & Order"
+        ],
         label_visibility="collapsed"
     )
     
@@ -364,7 +380,7 @@ if page == "Home":
     st.markdown('<div style="text-align:center; padding: 1rem 0;">', unsafe_allow_html=True)
     if os.path.exists("assets/saina_logo.png"):
         try:
-            c1, c2, c3 = st.columns([1, 1.2, 1])
+            c1, c2, c3 = st.columns([1.5, 1, 1.5])
             with c2:
                 st.image("assets/saina_logo.png", use_container_width=True)
         except:
@@ -473,17 +489,14 @@ elif page == "Payment & Shipping":
     
     st.info("After placing your order, please send proof of payment on WhatsApp so we can process it quickly.")
 
-elif page in ["Shop All", "Teas", "Coffee", "Snacks & Cookies", "Powders & Flours", "Sweeteners", "Infused Honeys", "Natural Oils", "Essential Oils", "Bathing Rituals", "Herbs & Spices"]:
+elif page in ["Shop All", "Teas & Coffee", "Snacks & Cookies", "Powders & Flours", "Sweeteners & Honeys", "Natural Oils", "Essential Oils", "Bathing Rituals", "Herbs & Spices"]:
     
     if page == "Shop All":
         filtered = PRODUCTS
         st.markdown("## All Products")
-    elif page == "Teas":
-        filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Teas"}
-        st.markdown("## Healing Teas")
-    elif page == "Coffee":
-        filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Coffee"}
-        st.markdown("## Coffee")
+    elif page == "Teas & Coffee":
+        filtered = {k:v for k,v in PRODUCTS.items() if v["category"] in ["Teas", "Coffee"]}
+        st.markdown("## Teas & Coffee")
     elif page == "Snacks & Cookies":
         filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Snacks & Cookies"}
         st.markdown("## Snacks & Cookies")
@@ -492,12 +505,10 @@ elif page in ["Shop All", "Teas", "Coffee", "Snacks & Cookies", "Powders & Flour
         filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Powders & Flours"}
         st.markdown("## Powders & Flours")
         st.caption("Sugar-free, gluten-free flours and nutrient-dense powders")
-    elif page == "Sweeteners":
-        filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Sweeteners"}
-        st.markdown("## Natural Sweeteners")
-    elif page == "Infused Honeys":
-        filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Infused Honeys"}
-        st.markdown("## Infused Honeys")
+    elif page == "Sweeteners & Honeys":
+        filtered = {k:v for k,v in PRODUCTS.items() if v["category"] in ["Sweeteners", "Infused Honeys"]}
+        st.markdown("## Sweeteners & Honeys")
+        st.caption("Natural sweeteners and infused honeys")
     elif page == "Natural Oils":
         filtered = {k:v for k,v in PRODUCTS.items() if v["category"] == "Natural Oils"}
         st.markdown("## Natural Oils")
